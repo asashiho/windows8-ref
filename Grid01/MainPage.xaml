@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Grid01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Grid01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid Width="700" Height="600">
+            <!-- 3行を100,200,残りのサイズで定義-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- 2列を2:5の割合で定義-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <TextBox Text="要素(0,0)"
+             Grid.Row="0" Grid.Column="0" Background="IndianRed" />
+            <TextBox Text="要素(1,0)"
+             Grid.Row="1" Grid.Column="0" Background="SteelBlue" />
+            <TextBox Text="要素(2,0)"
+             Grid.Row="2" Grid.Column="0" Background="Green" />
+            <TextBox Text="要素(0,1)"
+             Grid.Row="0" Grid.Column="1" Background="Purple" />
+            <TextBox Text="要素(1,1)"
+             Grid.Row="1" Grid.Column="1" Background="Gold" />
+            <TextBox Text="要素(2,1)"
+             Grid.Row="2" Grid.Column="1" Background="Maroon" />
+        </Grid>
+
+
+    </Grid>
+</Page>

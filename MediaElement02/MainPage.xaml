@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="MediaElement02.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MediaElement02"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Orientation="Horizontal">
+            
+            <StackPanel>
+                <!-- トランスポートコントロールを使う場合-->
+                <MediaElement x:Name="mediaElement1"
+                              PosterSource="/Common/Images/yokohama1.jpg"
+                              Source="/Media/sample_music.mp3"
+                              AutoPlay="False" Height="300"
+                              AreTransportControlsEnabled="True" />
+            </StackPanel>
+
+            <StackPanel>
+                <!-- トランスポートコントロールを使わない場合-->
+                <MediaElement x:Name="mediaElement2"
+                              PosterSource="/Common/Images/yokohama1.jpg"
+                              Source="/Media/sample_music.mp3"
+                              AutoPlay="False" Width="300" />
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton Icon="Play" Click="play_Click" />
+                    <AppBarButton Icon="Pause" Click="pause_Click" />
+                    <AppBarButton Icon="Stop" Click="stop_Click" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton Icon="Mute" Click="mute_Click" />
+                    <Slider Width="160" ValueChanged="slider_ValueChanged"
+                        ToolTipService.ToolTip="Volume"
+                        Maximum="1" Minimum="0" StepFrequency="0.1" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="CommandBar01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CommandBar01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <CommandBar Background="DarkRed">
+            <AppBarButton Icon="Add"  Label="追加" />
+            <AppBarButton Icon="Save" Label="保存" />
+            <AppBarButton Icon="Edit" Label="編集" />
+            <AppBarButton Icon="Clear" Label="クリア" />
+            <AppBarButton Icon="Delete" Label="削除" />
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Help"  Label="Help" IsCompact="true" />
+                <AppBarButton Icon="Mail"  Label="Mail" IsCompact="true" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+    </Grid>
+</Page>

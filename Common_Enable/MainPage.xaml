@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Common_Enable.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Common_Enable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <TextBlock FontSize="20">ラジオボタン</TextBlock>
+                <RadioButton Content="操作可" IsEnabled="True" />
+                <RadioButton x:Name="radioButtonName" Content="コードから操作" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock FontSize="20">チェックボックス</TextBlock>
+                <CheckBox Content="操作不可" IsEnabled="False" />
+                <CheckBox x:Name="checkBoxName" Content="コードから操作不可" />
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

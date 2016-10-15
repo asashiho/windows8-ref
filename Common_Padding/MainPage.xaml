@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Common_Padding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Common_Padding"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel>
+            <StackPanel  Background="SteelBlue">
+                <Button Content="Marginを設定" Margin="20,40,60,80" />
+            </StackPanel>
+            <StackPanel  Background="IndianRed">
+                <Button Content="Paddingを設定" Padding="0,5,10,15" />
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>

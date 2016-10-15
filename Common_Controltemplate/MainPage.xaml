@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Common_Controltemplate.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Common_Controltemplate"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ControlTemplate x:Key="buttonTemplate">
+            <Grid>
+                <Ellipse Fill="SteelBlue" Width="120" />
+                <ContentPresenter HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"/>
+            </Grid>
+        </ControlTemplate>
+    </Page.Resources>
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Orientation="Horizontal">
+            <Button Content="ボタン1" Margin="40"
+                    Template="{StaticResource buttonTemplate}" />
+            <Button Content="ボタン2" />
+        </StackPanel>
+
+    </Grid>
+</Page>

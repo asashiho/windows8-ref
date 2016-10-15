@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="ToolTip01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ToolTip01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel>
+            <TextBlock Text="本日の天気は晴れです" FontSize="20">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="傘は不要です" IsEnabled="True"
+                             HorizontalOffset="20" VerticalOffset="-50" />
+                </ToolTipService.ToolTip>
+            </TextBlock>
+            <AppBarButton Icon="Back" ToolTipService.ToolTip="戻る" />
+        </StackPanel>
+
+    </Grid>
+</Page>

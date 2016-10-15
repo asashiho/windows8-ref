@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="MenuFlyout01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MenuFlyout01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel>
+            <Button Content="メニューを開く">
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="保存" Click="item_Click" />
+                        <MenuFlyoutItem Text="編集" Click="item_Click" />
+                        <MenuFlyoutSeparator />
+                        <ToggleMenuFlyoutItem Text="オプション"
+                                              Click="togggle_Click" />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <TextBlock x:Name="textBlockName" />
+        </StackPanel>
+
+    </Grid>
+</Page>

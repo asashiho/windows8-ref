@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="AppBar03.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppBar03"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.BottomAppBar>
+        <AppBar Background="DarkRed">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Like" Label="シンボルを指定" />
+                <AppBarButton Label="これは表示されない" IsCompact="true">
+                    <AppBarButton.Icon>
+                        <FontIcon FontFamily="Segoe" Glyph="&#9835;" />
+                    </AppBarButton.Icon>
+                </AppBarButton>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    </Grid>
+</Page>

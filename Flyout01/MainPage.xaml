@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Flyout01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Flyout01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel>
+            <Button Content="ポップアップを表示します">
+                <Button.Flyout>
+                    <Flyout Opened="flyout_Opened"
+                            Closed="flyout_Closed"
+                            Placement="Right">
+                        <StackPanel>
+                            <TextBlock>送信しますか？</TextBlock>
+                            <Button x:Name="buttonName" 
+                                    Content="はい" Click="button_Click" />
+                        </StackPanel>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+            <TextBlock x:Name="textBlockName" />
+        </StackPanel>
+
+    </Grid>
+</Page>

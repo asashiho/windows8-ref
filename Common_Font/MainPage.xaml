@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Common_Font.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Common_Font"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <TextBox Text="Times New Roman/25ピクセル/斜体に設定"
+                     FontFamily="Times New Roman"
+                     FontSize="25" FontStyle="Italic" />
+            <TextBox Text="Verdana/35ピクセル/太字に設定"
+                     FontFamily="Verdana"
+                     FontSize="35" FontWeight="Bold" />
+            <TextBox Text="Segoe/45ピクセル/斜投影に設定"
+                     FontFamily="Segoe"
+                     FontStretch="UltraExpanded"
+                     FontSize="45" FontStyle="Oblique" />
+            <TextBlock>
+                一部の文字のフォントなどを変更するには
+                <Run Text="Run要素を記述できる" FontFamily="Meiryo" FontSize="20"/>
+            </TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Page>

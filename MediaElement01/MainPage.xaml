@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="MediaElement01.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MediaElement01"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <StackPanel>
+            <MediaElement x:Name="mediaElementName"
+                          Source="/Media/sample_movie.mp4"
+                          AutoPlay="False" Height="300" />
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Play" Click="play_Click" />
+                <AppBarButton Icon="Pause" Click="pause_Click" />
+                <AppBarButton Icon="Stop" Click="stop_Click" />
+                <AppBarButton Icon="Back" Click="back_Click" />
+                <AppBarButton Icon="Forward" Click="forward_Click" />
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Page>
